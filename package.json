@@ -1,0 +1,22 @@
+{
+  "name": "opsdesk",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.22.0",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "build": "corepack pnpm --recursive --if-present run build",
+    "dev": "corepack pnpm --parallel --filter @opsdesk/web --filter @opsdesk/api run dev",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "corepack pnpm --recursive --if-present run lint",
+    "test": "corepack pnpm --recursive --if-present run test",
+    "typecheck": "corepack pnpm --recursive --if-present run typecheck"
+  },
+  "devDependencies": {
+    "prettier": "3.9.6",
+    "prettier-plugin-tailwindcss": "0.8.1"
+  }
+}
