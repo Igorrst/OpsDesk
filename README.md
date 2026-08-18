@@ -11,6 +11,23 @@ Plataforma SaaS para gestão de suporte, chamados e operações.
 
 - Node.js 24 ou superior
 - Corepack habilitado
+- Docker com Docker Compose
+
+## Infraestrutura local
+
+Crie o arquivo de variáveis locais e inicie PostgreSQL e Redis:
+
+```powershell
+Copy-Item .env.example .env
+docker compose up -d
+docker compose ps
+```
+
+Para interromper os serviços sem remover os dados:
+
+```bash
+docker compose down
+```
 
 ## Desenvolvimento
 
