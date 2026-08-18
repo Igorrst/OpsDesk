@@ -8,6 +8,10 @@
   },
   "scripts": {
     "build": "corepack pnpm --recursive --if-present run build",
+    "db:generate": "corepack pnpm --filter @opsdesk/api run db:generate",
+    "db:migrate": "corepack pnpm --filter @opsdesk/api run db:migrate",
+    "db:seed": "corepack pnpm --filter @opsdesk/api run db:seed",
+    "db:studio": "corepack pnpm --filter @opsdesk/api run db:studio",
     "dev": "corepack pnpm --parallel --filter @opsdesk/web --filter @opsdesk/api run dev",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

@@ -23,6 +23,12 @@ docker compose up -d
 docker compose ps
 ```
 
+Configure também as variáveis da API:
+
+```powershell
+Copy-Item apps/api/.env.example apps/api/.env
+```
+
 Para interromper os serviços sem remover os dados:
 
 ```bash
@@ -37,6 +43,17 @@ corepack pnpm dev
 ```
 
 O Front-End fica disponível em `http://localhost:3000` e a API em `http://localhost:3333`.
+
+## Banco de dados
+
+Com o PostgreSQL em execução, aplique as migrations e execute o seed:
+
+```bash
+corepack pnpm db:migrate
+corepack pnpm db:seed
+```
+
+As decisões de modelagem estão em [`docs/DATABASE.md`](docs/DATABASE.md).
 
 ## Qualidade
 
